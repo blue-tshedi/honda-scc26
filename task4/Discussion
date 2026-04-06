@@ -20,14 +20,11 @@ As we increase the number of qubits, the simulation time grows exponentially. Th
 ---
 
 ### Varying Number of Shots
-The `shots` parameter defines how many times we sample the circuit. While more shots increase the workload, the impact on performance is linear and much easier for the CPU to handle than adding qubits.
+The `shots` parameter defines how many times we sample the circuit. While more shots increase the workload, the impact
+on performance is linear and much easier for the CPU to handle than adding qubits.
 
 | **Case 1: 100 Shots** | **Case 2: 1000 Shots** |
 | :---: | :---: |
 | `qubits=(2,10)`, `depth=5`, `shots=100` | `qubits=(2,10)`, `depth=5`, `shots=1000` |
 | ![100 Shots](images/qv_experiment_100shots.png) | ![1000 Shots](images/qv_experiment_1000shots.png) |
 
-**Discussion:**
-Increasing the shot count makes the simulation take longer, but the growth is steady. "Shots" are essentially how many times we sample the quantum circuit. For a classical CPU, the heaviest lift is calculating the initial math for the quantum state. Once that hard work is finished, asking the computer for more samples is relatively easy. 
-
-While a higher shot count is more demanding, it does not cause the massive performance spikes seen when adding more qubits or increasing the volume depth.
