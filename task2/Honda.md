@@ -20,6 +20,7 @@ journalctl -u sshd --since "1 hour ago"
 Result:
 SSH logs show both failed and successful login attempts.
 
+![SSH Logs](img/ssh-logs.jpeg)
 ## 4. CPU information
 
 Command used:
@@ -30,15 +31,8 @@ Architecture: x86_64
 Cores per socket: 8
 Various CPU flags were displayed.
 
-## 5. Compute node allocation
+![CPU COM INFO](img/cpu-com.jpeg)
 
-Commands used:
-salloc -N 1 -t 30:0
-srun --pty bash
-hostname
 
-Result:
-Successfully allocated a compute node (com1) and accessed it.
-
-Result:
-The SSH service is active and running on the head node.
+## 6. State Enabled Service
+![Enabled Services](img/eService.jpeg)
